@@ -4,7 +4,7 @@ module control(
     input clk, rst, start,
     input wire [1:0] count,
     output reg regclr, clken, done,
-    output reg [2:0] state_out,
+    output wire [2:0] state_out,
     output reg [1:0] in_sel, shift
 );
 
@@ -16,15 +16,22 @@ module control(
 
     reg [2:0] current_state, next_state;
 
-    //Logica do Reset
-    always @ (posedge clk) begin
+    //Logica do Reset Assincrono e Registrador de Estado
+    always @ (posedge clk or posedge rst) begin
         if (rst) current_state <= IDL;
         else current_state <= next_state;
     end
 
     //Logica do proximo estado
     always @ (*) begin 
-        //Boa pratica para nao gerar latches é inicializar as saidas
+        //Boa pratica para evitar latches: inicializar as saidas
+        in_sel = 2'b00;
+        shift = 2'b00;
+        done = 1'b0;
+        clken = 1'b0;
+        regclr = 1'b0;
+        next_state = current_state;
+
         case(current_state)
             IDL: begin
                 if (start == 1'b1) begin 
@@ -81,12 +88,34 @@ module control(
                 end
             end
             MSB: begin
-                if (start == 1'b0 && count == 2'b11) next_state = IDL;
-                else next_state = ERR;
+                if (start == 1'b0 && count == 2'b11) begin 
+                    next_state = IDL;
+                    in_sel = 2'b11;
+                    shift = 2'b10;
+                    done = 1'b1;
+                    clken = 1'b0;
+                    regclr = 1'b1;
+                end
+                else begin
+                    next_state = ERR;
+                    done = 1'b0;
+                    clken = 1'b1;
+                    regclr = 1'b1;
+                end
             end
             ERR: begin
-                if (start == 1'b1) next_state = LSB;
-                else next_state = ERR;
+                if (start == 1'b1) begin 
+                    next_state = LSB;
+                    done = 1'b0;
+                    clken = 1'b1;
+                    regclr = 1'b0;
+                end
+                else begin
+                    next_state = ERR;
+                    done = 1'b0;
+                    clken = 1'b1;
+                    regclr = 1'b1;
+                end
             end
             default: next_state = IDL;
         endcase
