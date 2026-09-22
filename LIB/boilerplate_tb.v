@@ -25,15 +25,8 @@ module control_tb;
         $display("TIME: %0t - INPUTS - clk: %b | rst: %b | start: %b | count: %b \n OUTPUTS - regclr: %b | clken: %b | done: %b | state_out: %b | in_sel: %b | shift: %b", $time, clk, rst, start, count, regclr, clken, done, state_out, in_sel, shift);
         $monitor("TIME: %0t - INPUTS - clk: %b | rst: %b | start: %b | count: %b \n OUTPUTS - regclr: %b | clken: %b | done: %b | state_out: %b | in_sel: %b | shift: %b", $time, clk, rst, start, count, regclr, clken, done, state_out, in_sel, shift);
 
-        
-        rst = 1'b0;
-        start = 1'b0;
-        cout = 2'b00;
-
-        //Agora tenho que pensar nos vetores de teste
 
     end
-
 
 
 endmodule
