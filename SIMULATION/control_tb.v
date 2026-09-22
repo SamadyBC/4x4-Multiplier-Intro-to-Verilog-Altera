@@ -20,7 +20,7 @@ module control_tb;
     always #5 clk = ~clk;
 
     initial begin
-        $dumpfile("control.vcd");
+        $dumpfile("SIMULATION/control.vcd");
         $dumpvars(0, control_tb);
         $display("TIME: %0t - INPUTS - clk: %b | rst: %b | start: %b | count: %b \n OUTPUTS - regclr: %b | clken: %b | done: %b | state_out: %b | in_sel: %b | shift: %b", $time, clk, rst, start, count, regclr, clken, done, state_out, in_sel, shift);
         $monitor("TIME: %0t - INPUTS - clk: %b | rst: %b | start: %b | count: %b \n OUTPUTS - regclr: %b | clken: %b | done: %b | state_out: %b | in_sel: %b | shift: %b", $time, clk, rst, start, count, regclr, clken, done, state_out, in_sel, shift);
@@ -28,10 +28,25 @@ module control_tb;
         
         rst = 1'b0;
         start = 1'b0;
-        cout = 2'b00;
+        count = 2'b00;
 
         //Agora tenho que pensar nos vetores de teste
-
+        #7;
+        rst = 1'b1;
+        #1;
+        rst = 1'b0;
+        #4;
+        start = 1'b1;
+        #8;
+        start = 1'b0;
+        #7;
+        count = 2'b01;
+        #10;
+        count = 2'b10;
+        #10;
+        count = 2'b11;
+        #20;
+        $finish;
     end
 
 

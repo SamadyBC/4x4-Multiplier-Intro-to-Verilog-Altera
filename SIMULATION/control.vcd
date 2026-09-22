@@ -1,0 +1,175 @@
+$date
+	Tue Sep 22 20:49:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module control_tb $end
+$var wire 3 ! state_out [2:0] $end
+$var wire 2 " shift [1:0] $end
+$var wire 1 # regclr $end
+$var wire 2 $ in_sel [1:0] $end
+$var wire 1 % done $end
+$var wire 1 & clken $end
+$var reg 1 ' clk $end
+$var reg 2 ( count [1:0] $end
+$var reg 1 ) rst $end
+$var reg 1 * start $end
+$scope module DUT01 $end
+$var wire 1 ' clk $end
+$var wire 2 + count [1:0] $end
+$var wire 1 ) rst $end
+$var wire 1 * start $end
+$var wire 3 , state_out [2:0] $end
+$var parameter 3 - ERR $end
+$var parameter 3 . IDL $end
+$var parameter 3 / LSB $end
+$var parameter 3 0 MID $end
+$var parameter 3 1 MSB $end
+$var reg 1 & clken $end
+$var reg 3 2 current_state [2:0] $end
+$var reg 1 % done $end
+$var reg 2 3 in_sel [1:0] $end
+$var reg 3 4 next_state [2:0] $end
+$var reg 1 # regclr $end
+$var reg 2 5 shift [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11 1
+b10 0
+b1 /
+b0 .
+b100 -
+$end
+#0
+$dumpvars
+b0 5
+b0 4
+b0 3
+bx 2
+bx ,
+b0 +
+0*
+0)
+b0 (
+0'
+0&
+0%
+b0 $
+0#
+b0 "
+bx !
+$end
+#5
+1#
+1&
+b0 !
+b0 ,
+b0 2
+1'
+#7
+1)
+#8
+0)
+#10
+0'
+#12
+b1 4
+0#
+1&
+1*
+#15
+1#
+b100 4
+1&
+b1 !
+b1 ,
+b1 2
+1'
+#20
+b10 4
+1#
+0&
+0'
+0*
+#25
+1&
+b100 4
+1#
+b10 !
+b10 ,
+b10 2
+1'
+#27
+b1 "
+b1 5
+b1 $
+b1 3
+b10 4
+1#
+0&
+b1 (
+b1 +
+#30
+0'
+#35
+1'
+#37
+b11 4
+1#
+b1 "
+b1 5
+b10 $
+b10 3
+b10 (
+b10 +
+#40
+0'
+#45
+1&
+b100 4
+1#
+b0 "
+b0 5
+b0 $
+b0 3
+b11 !
+b11 ,
+b11 2
+1'
+#47
+1%
+b10 "
+b10 5
+b11 $
+b11 3
+b0 4
+1#
+0&
+b11 (
+b11 +
+#50
+0'
+#55
+1&
+1#
+0%
+b0 "
+b0 5
+b0 $
+b0 3
+b0 !
+b0 ,
+b0 2
+1'
+#60
+0'
+#65
+1'
+#67
