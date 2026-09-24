@@ -19,6 +19,12 @@ module control_tb;
 
     always #5 clk = ~clk;
 
+    //Simula comportamento sincrono de um registrador contador
+    always @ (posedge clk) begin
+        if (start) count <= 2'b00;
+        else count <= count + 1'b1;
+    end 
+
     initial begin
         $dumpfile("SIMULATION/control.vcd");
         $dumpvars(0, control_tb);
@@ -28,24 +34,38 @@ module control_tb;
         
         rst = 1'b0;
         start = 1'b0;
-        count = 2'b00;
+        //count = 2'b00;
 
-        //Agora tenho que pensar nos vetores de teste
-        #7;
-        rst = 1'b1;
-        #1;
-        rst = 1'b0;
-        #4;
+        //Test bench inicial com ciclo interrompido e ciclo finalizado.
+        //#10;
+        //start = 1'b1;
+        //#10;
+        //start = 1'b0;
+        //#40;
+        //start = 1'b1;
+        //#10;
+        //start = 1'b0;
+        //#15;
+        //rst = 1'b1;
+        //#5;
+        //rst = 1'b0;
+        //#40;
+        //start = 1'b1;
+        //#10;
+        //start = 1'b0;
+        //#40;
+        
+        //Test bench com erro no meio da etapa e recuperacao.
+        #10;
         start = 1'b1;
-        #8;
+        #10;
         start = 1'b0;
-        #7;
-        count = 2'b01;
-        #10;
-        count = 2'b10;
-        #10;
-        count = 2'b11;
-        #20;
+        #15;
+        start = 1'b1;
+        #15
+        start = 1'b0;
+        #60
+
         $finish;
     end
 
