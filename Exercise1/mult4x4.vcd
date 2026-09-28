@@ -1,0 +1,68 @@
+$date
+	Tue Aug 25 20:52:09 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module mult4x4_tb $end
+$var wire 8 ! product [7:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$scope module dut01 $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % b [3:0] $end
+$var wire 8 & product [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b10 %
+b0 $
+b10 #
+b0 "
+b0 !
+$end
+#10
+b100 !
+b100 &
+b10 "
+b10 $
+#20
+b1000 !
+b1000 &
+b100 "
+b100 $
+#30
+b1100 !
+b1100 &
+b110 "
+b110 $
+#40
+b1110 !
+b1110 &
+b111 "
+b111 $
+#50
+b10000 !
+b10000 &
+b1000 "
+b1000 $
+#60
+b10010 !
+b10010 &
+b1001 "
+b1001 $
+#70
+b10100 !
+b10100 &
+b1010 "
+b1010 $
+#80

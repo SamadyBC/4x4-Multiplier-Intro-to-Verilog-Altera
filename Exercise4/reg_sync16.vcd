@@ -1,0 +1,62 @@
+$date
+	Mon Sep  7 19:48:21 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module reg_sync16_tb $end
+$var wire 16 ! out_reg [15:0] $end
+$var reg 1 " clk $end
+$var reg 1 # clken_n $end
+$var reg 1 $ clr_n $end
+$var reg 16 % in_reg [15:0] $end
+$scope module DUT01 $end
+$var wire 1 " clk $end
+$var wire 1 # clken_n $end
+$var wire 1 $ clr_n $end
+$var wire 16 & in_reg [15:0] $end
+$var parameter 1 ' clear $end
+$var parameter 1 ( load $end
+$var reg 1 ) load_clear $end
+$var reg 16 * out_reg [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+1(
+0'
+$end
+#0
+$dumpvars
+bx *
+0)
+b1010101010101010 &
+b1010101010101010 %
+0$
+1#
+0"
+bx !
+$end
+#5
+b0 !
+b0 *
+1"
+#10
+0#
+0"
+#15
+1"
+#20
+1)
+1$
+0"
+#25
+b1010101010101010 !
+b1010101010101010 *
+1"
+#30
+0"

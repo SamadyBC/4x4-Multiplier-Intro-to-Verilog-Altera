@@ -1,0 +1,48 @@
+$date
+	Mon Aug 31 20:51:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module shift_register_tb $end
+$var wire 16 ! result [15:0] $end
+$var reg 2 " cnt [1:0] $end
+$var reg 8 # inp [7:0] $end
+$scope module DUT01 $end
+$var wire 2 $ cnt [1:0] $end
+$var wire 8 % inp [7:0] $end
+$var reg 16 & result [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11110000 &
+b11110000 %
+b0 $
+b11110000 #
+b0 "
+b11110000 !
+$end
+#50
+b111100000000 !
+b111100000000 &
+b1 "
+b1 $
+#100
+b1111000000000000 !
+b1111000000000000 &
+b10 "
+b10 $
+#150
+b11110000 !
+b11110000 &
+b11 "
+b11 $
+#200
