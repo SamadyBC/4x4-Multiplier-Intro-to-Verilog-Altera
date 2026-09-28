@@ -1,0 +1,75 @@
+$date
+	Tue Aug 25 20:31:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module full_adder_tb $end
+$var wire 16 ! sum [15:0] $end
+$var wire 1 " c_out $end
+$var reg 16 # a [15:0] $end
+$var reg 16 $ b [15:0] $end
+$var reg 1 % c_in $end
+$scope module dut $end
+$var wire 16 & A [15:0] $end
+$var wire 16 ' B [15:0] $end
+$var wire 1 % c_in $end
+$var wire 1 " c_out $end
+$var wire 16 ( Sum [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 (
+b0 '
+b0 &
+0%
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+b10 !
+b10 (
+b1 $
+b1 '
+b1 #
+b1 &
+#20
+b1001 !
+b1001 (
+b1000 #
+b1000 &
+#30
+b1010 !
+b1010 (
+1%
+#40
+b1101 !
+b1101 (
+0%
+b101 $
+b101 '
+#50
+b1 !
+b1 (
+b1 $
+b1 '
+b0 #
+b0 &
+#60
+b1111 !
+b1111 (
+b101 $
+b101 '
+b1010 #
+b1010 &
+#70

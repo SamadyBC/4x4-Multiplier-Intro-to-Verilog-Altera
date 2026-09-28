@@ -1,0 +1,7 @@
+Implemente um circuito combinacional somador completo de 16 bits. Bem como sua testbench para o seguintes valores de entrada.
+A=8,0,10;
+B=5,1,5;
+
+Implemente um circuito combinacional multiplicador de 4 bits. Bem como sua testbench para os seguintes valores de entrada.
+A=0,2,4,6,7,8,9,10;
+B=2;
