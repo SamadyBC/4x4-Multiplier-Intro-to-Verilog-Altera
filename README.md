@@ -3,9 +3,9 @@ Repo dedicated to document the exercises and final challenge proposed by Altera'
 
 
 ## TODO 
-Now, the next step is to organize each of the modules and retest it using the testbenches allready implemented. 
+Now, the next step is retesting each module and its testbench. Verify if it is working as it should. 
 
-And afterwards, I have to start the implementation of the top file and its testbench.
+And afterwards, I have to start the implementation of the top level entity file and its testbench.
 
 ## Commands for Project
 
