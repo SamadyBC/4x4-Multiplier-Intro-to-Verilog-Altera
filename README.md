@@ -26,3 +26,34 @@ $dumpfile("meu_inversor.vcd");
 $dumpvars(0, meu_inversor_tb);
 $display("Time (ns): A | G ");
 $monitor("%9t: %b | %b ",$time, A, G);
+
+# Conventional Commits
+The Conventional Commits specification formally defines feat and fix, but permits additional types. The standard
+  @commitlint/config-conventional set is: Conventional Commits (https://www.conventionalcommits.org/) and commitlint
+  configuration
+  (https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-conventional/README.md).
+
+  - feat: — introduces a feature
+  - fix: — corrects a bug
+  - refactor: — restructures code without adding a feature or fixing a bug
+  - chore: — miscellaneous maintenance that does not modify application or test behavior
+  - build: — changes the build system or dependencies
+  - ci: — changes CI configuration or scripts
+  - docs: — documentation-only changes
+  - style: — formatting, whitespace, or similar changes that do not affect behavior
+  - perf: — improves performance
+  - test: — adds or corrects tests
+  - revert: — reverts an earlier commit
+
+  Some examples for your situation:
+
+  refactor: reorganize source directory structure
+  chore: reorganize repository configuration files
+  build: reorganize build scripts
+  docs: reorganize documentation
+  test: reorganize test directory structure
+
+  You can also add an optional scope:
+
+  refactor(core): reorganize module structure
+  chore(repo): move configuration files
