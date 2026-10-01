@@ -19,7 +19,7 @@ module shift_register(
         else if (cnt == 2'b11) begin
             result = inp << 0;
         end
-        else result = 2'h00;
+        else result = 16'h0AA0;
     end
 
 endmodule

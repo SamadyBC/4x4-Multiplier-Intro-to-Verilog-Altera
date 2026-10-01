@@ -26,7 +26,9 @@ module shift_register_tb;
         #50;
         cnt = 2'b11;
         #50;
-    end;
+        cnt = 2'bxx;
+        #50;
+    end
 
 
 endmodule;
