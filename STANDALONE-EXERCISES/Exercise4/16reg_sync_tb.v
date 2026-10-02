@@ -11,7 +11,7 @@ module reg_sync16_tb;
     );
 
 
-    
+    initial clk = 1'b0;
     always #5 clk = ~clk; 
 
     initial begin
@@ -19,7 +19,6 @@ module reg_sync16_tb;
         $dumpvars(0, reg_sync16_tb);
         $display("Time (ns): in_reg | clken_n | clr_n | out_reg");
         $monitor("%9t: %b | %b  | %b  | %b", $time, in_reg, clken_n, clr_n, out_reg);
-        clk <= 1'b0;
         clken_n <= 1'b1;
         clr_n <= 1'b0;
         in_reg <= 16'haaaa;

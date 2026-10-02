@@ -18,7 +18,7 @@ module mux2_1_tb;
         $dumpvars(0, mux2_1_tb);
 
         $display("========================================");
-        $display("        Multiplier 4x4 TESTBENCH");
+        $display("        Multiplexer 2x1 TESTBENCH");
         $display("========================================");
         $monitor("Time (ns): %0t | a=%0h - b=%0h - sel= %0h y=%0h",
         $time, a, b, sel, y);

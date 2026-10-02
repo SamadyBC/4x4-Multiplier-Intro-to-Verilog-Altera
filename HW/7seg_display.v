@@ -7,7 +7,7 @@ module sevenseg_display(
 
     always @ (*) begin
         case(inp)
-            3'b000: begin
+            3'b000: begin // Representa o caractere: '0'
                 a <= 1'b1; 
                 b <= 1'b1;
                 c <= 1'b1;
@@ -16,7 +16,7 @@ module sevenseg_display(
                 f <= 1'b1;
                 g <= 1'b0;  
             end
-            3'b001: begin
+            3'b001: begin // Representa o caractere: '1'
                 a <= 1'b0;
                 b <= 1'b1;
                 c <= 1'b1;
@@ -25,7 +25,7 @@ module sevenseg_display(
                 f <= 1'b0;
                 g <= 1'b0;
             end
-            3'b010: begin
+            3'b010: begin // Representa o caractere: '2'
                 a <= 1'b1;
                 b <= 1'b1;
                 c <= 1'b0;
@@ -34,7 +34,7 @@ module sevenseg_display(
                 f <= 1'b0;
                 g <= 1'b1;
             end
-            3'b011: begin
+            3'b011: begin // Representa o caractere: '3'
                 a <= 1'b1;
                 b <= 1'b1;
                 c <= 1'b1;
@@ -43,7 +43,7 @@ module sevenseg_display(
                 f <= 1'b0;
                 g <= 1'b1;
             end
-            3'b100: begin
+            3'b100: begin // Representa o caractere: 'E'
                 a <= 1'b1;
                 b <= 1'b0;
                 c <= 1'b0;
@@ -52,7 +52,7 @@ module sevenseg_display(
                 f <= 1'b1;
                 g <= 1'b1;
             end
-            3'b101: begin
+            3'b101: begin // Representa o caractere: 'E'
                 a <= 1'b1;
                 b <= 1'b0;
                 c <= 1'b0;
@@ -61,7 +61,7 @@ module sevenseg_display(
                 f <= 1'b1;
                 g <= 1'b1;
             end
-            3'b110: begin
+            3'b110: begin // Representa o caractere: 'E'
                 a <= 1'b1;
                 b <= 1'b0;
                 c <= 1'b0;
@@ -70,7 +70,7 @@ module sevenseg_display(
                 f <= 1'b1;
                 g <= 1'b1;
             end
-            3'b111: begin
+            3'b111: begin // Representa o caractere: 'E'
                 a <= 1'b1;
                 b <= 1'b0;
                 c <= 1'b0;
@@ -82,5 +82,4 @@ module sevenseg_display(
         endcase
     end
 
-
-endmodule;
+endmodule

@@ -12,20 +12,20 @@ module reg_sync16(
     reg load_clear;
 
     always @ (*) begin
-        if ( ~clken_n & ~clr_n ) begin
+        if ( ~clken_n & ~clr_n ) begin //clken e clr em 0 entao clear
             load_clear <= 1'b0;
-        end else if ( ~clken_n & clr_n) begin
+        end else if ( ~clken_n & clr_n) begin //clken  em e clr em 1 entao load
             load_clear <= 1'b1;
         end else begin
             load_clear <= 1'b0;
         end
     end
 
-    always @ (posedge clk) begin
+    always @ (posedge clk) begin //Load and Clear sincrono
         case(load_clear)
-            clear: out_reg <= 16'b0000000000000000;
+            clear: out_reg <= 16'h0000;
             load:  out_reg <= in_reg;
-            default: out_reg <= 16'b0000000000000001;
+            default: out_reg <= 16'h0001;
         endcase
     end
 

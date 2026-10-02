@@ -3,7 +3,14 @@ Repo dedicated to document the exercises and final challenge proposed by Altera'
 
 
 ## TODO 
-Now, the next step is retesting each module and its testbench. Verify if it is working as it should. 
+Now, the next step is retesting each module and its testbench. Verify if it is working as it should.
+- full_adder.v and full_adder_tb.v verified;
+- mult4x4.v and mult4x4_tb.v verified;
+- mux2x1.v and mux2x1_tb.v verified;
+- shift_register.v and shift_register_tb.v verified;
+- 7seg_display.v and 7seg_display_tb.v verified;
+- 16reg_sync.v and 16reg_sync_tb.v verified;
+
 
 And afterwards, I have to start the implementation of the top level entity file and its testbench.
 
